@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-    <data>
+<odoo>
         <template id="report_mrprepair_proforma" inherit_id="mrp_repair.report_mrprepairorder">
             <xpath expr="//div[@class='page']/h2" position="replace">
                 <h2>
@@ -11,5 +10,4 @@
                 </h2>
             </xpath>
         </template>
-    </data>
-</openerp>
+</odoo>
