@@ -2,9 +2,9 @@
    :target: https://www.gnu.org/licenses/agpl
    :alt: License: AGPL-3
 
-===================
-MRP Repair Warranty
-===================
+===============
+Repair Warranty
+===============
 
 This module adds a check field to define repairs in warranty.
 
