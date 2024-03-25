@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<openerp>
-    <data>
+<odoo>
         <record id="view_repair_order_form_inh_partner_lot" model="ir.ui.view">
             <field name="name">view.repair.order.form.inh.partner.lot</field>
             <field name="model">mrp.repair</field>
@@ -54,5 +53,4 @@
                 </page>
             </field>
         </record>
-    </data>
-</openerp>
+</odoo>

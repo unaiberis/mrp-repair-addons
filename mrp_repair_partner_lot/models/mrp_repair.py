@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 # Copyright 2019 Alfredo de la Fuente - AvanzOSC
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
-from openerp import models, fields, api
-import openerp.addons.decimal_precision as dp
+from odoo import models, fields, api
 
 
 class MrpRepair(models.Model):
@@ -33,7 +31,7 @@ class MrpRepairCustomerLot(models.Model):
     lot_id = fields.Many2one(
         comodel_name='stock.production.lot', string='Lot')
     quantity = fields.Float(
-        string='Quantity', digits=dp.get_precision('Product Unit of Measure'))
+        string='Quantity', digits='Product Unit of Measure')
     description_breakdown = fields.Text(string='Description breakdown')
     cause = fields.Text(string='Cause')
     repair_made = fields.Text(string='Repair made')

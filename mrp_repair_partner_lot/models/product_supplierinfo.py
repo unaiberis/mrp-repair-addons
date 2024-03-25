@@ -1,14 +1,12 @@
-# -*- coding: utf-8 -*-
 # Copyright 2019 Alfredo de la Fuente - AvanzOSC
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
-from openerp import api, models
-from openerp.models import expression
+from odoo import api, models
+from odoo.models import expression
 
 
 class ProductSupplierinfo(models.Model):
     _inherit = 'product.supplierinfo'
 
-    @api.multi
     def name_get(self):
         results = []
         for suppinfo in self:

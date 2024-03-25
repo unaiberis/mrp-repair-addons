@@ -1,10 +1,9 @@
-# -*- coding: utf-8 -*-
 # Copyright 2019 Alfredo de la Fuente - AvanzOSC
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
 {
     "name": "MRP Repair Partner Lot",
-    "version": "8.0.1.2.0",
+    "version": "16.0.1.0.0",
     "license": "AGPL-3",
     "author": "AvanzOSC",
     "website": "http://www.avanzosc.es",
