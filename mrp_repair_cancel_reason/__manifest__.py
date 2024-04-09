@@ -15,6 +15,7 @@
     'depends': ['product',
                 'stock',
                 'mrp',
+                'repair',
                 ],
     'data': ['security/ir.model.access.csv',
              'data/repair_order_cancel_reason.xml',
