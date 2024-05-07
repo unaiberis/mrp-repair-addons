@@ -6,7 +6,6 @@ from odoo import api, models
 class RepairOrder(models.Model):
     _inherit = "repair.order"
 
-    @api.multi
     def action_invoice_create(self, group=False):
         return super(RepairOrder, self.with_context(
             create_invoice_from_repair=True)).action_invoice_create(group=group)
