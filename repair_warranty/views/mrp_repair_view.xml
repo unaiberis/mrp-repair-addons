@@ -28,11 +28,17 @@
                   <field name="is_in_warranty" />
               </field>
               <filter name="invoiced" position="after">
-                  <separator/>
-                  <filter string="With Warranty" name="warranty"
-                          domain="[('is_in_warranty', '=', True)]"/>
-                  <filter string="Without Warranty" name="no_warranty"
-                          domain="[('is_in_warranty', '!=', True)]"/>
+                  <separator />
+                  <filter
+          string="With Warranty"
+          name="warranty"
+          domain="[('is_in_warranty', '=', True)]"
+        />
+                  <filter
+          string="Without Warranty"
+          name="no_warranty"
+          domain="[('is_in_warranty', '!=', True)]"
+        />
               </filter>
           </field>
     </record>
