@@ -12,13 +12,13 @@
         <record forcecreate="True" id="property_stock_refurbish" model="ir.property">
             <field name="name">property_stock_refurbish</field>
             <field
-                name="fields_id"
-                search="[('model','=','product.template'),('name','=','property_stock_refurbish')]"
-            />
+        name="fields_id"
+        search="[('model','=','product.template'),('name','=','property_stock_refurbish')]"
+      />
             <field
-                eval="'stock.location,'+str(stock_location_refurbish)"
-                name="value"
-            />
+        eval="'stock.location,'+str(stock_location_refurbish)"
+        name="value"
+      />
         </record>
     </data>
 </odoo>

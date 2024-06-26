@@ -6,7 +6,7 @@ from odoo.tests.common import TransactionCase
 
 class TestMrpMtoWithStock(TransactionCase):
     def setUp(self, *args, **kwargs):
-        super(TestMrpMtoWithStock, self).setUp(*args, **kwargs)
+        super().setUp(*args, **kwargs)
         self.repair_obj = self.env["repair.order"]
         self.repair_line_obj = self.env["repair.line"]
         self.product_obj = self.env["product.product"]

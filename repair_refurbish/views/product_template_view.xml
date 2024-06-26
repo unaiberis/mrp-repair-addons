@@ -7,10 +7,10 @@
         <field name="arch" type="xml">
             <group name="inventory" position="after">
                 <group
-                    name="refurbish"
-                    string="Refurbish"
-                    attrs="{'invisible':[('product_variant_count', '&gt;', 1)]}"
-                >
+          name="refurbish"
+          string="Refurbish"
+          attrs="{'invisible':[('product_variant_count', '&gt;', 1)]}"
+        >
                     <field name="refurbish_product_id" />
                 </group>
             </group>
@@ -23,9 +23,9 @@
         <field name="arch" type="xml">
             <field name="property_stock_production" position="after">
                 <field
-                    name="property_stock_refurbish"
-                    domain="[('usage','=','production')]"
-                />
+          name="property_stock_refurbish"
+          domain="[('usage','=','production')]"
+        />
             </field>
         </field>
     </record>

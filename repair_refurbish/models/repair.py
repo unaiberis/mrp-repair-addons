@@ -94,7 +94,7 @@ class RepairLine(models.Model):
 
     @api.onchange("type", "repair_id")
     def onchange_operation_type(self):
-        res = super(RepairLine, self).onchange_operation_type()
+        res = super().onchange_operation_type()
         context = self.env.context
         if self.type == "add" and "to_refurbish" in context and context["to_refurbish"]:
             self.location_dest_id = context["refurbish_location_dest_id"]
