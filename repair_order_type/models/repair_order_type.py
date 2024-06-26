@@ -4,28 +4,29 @@ from odoo import api, fields, models
 
 
 class RepairOrderType(models.Model):
-    _name = 'repair.order.type'
-    _description = 'Repair Order Type'
-    _order = 'sequence'
+    _name = "repair.order.type"
+    _description = "Repair Order Type"
+    _order = "sequence"
 
     @api.model
     def _get_domain_sequence_id(self):
-        seq_type = self.env.ref('repair.seq_repair')
-        return [('code', '=', seq_type.code)]
+        seq_type = self.env.ref("repair.seq_repair")
+        return [("code", "=", seq_type.code)]
 
-    name = fields.Char(string='Name', required=True)
-    sequence = fields.Integer(string='Sequence')
+    name = fields.Char(required=True)
+    sequence = fields.Integer()
     sequence_id = fields.Many2one(
-        comodel_name='ir.sequence',
-        string='Entry Sequence',
+        comodel_name="ir.sequence",
+        string="Entry Sequence",
         copy=False,
-        domain=_get_domain_sequence_id)
+        domain=_get_domain_sequence_id,
+    )
     reparation_location_id = fields.Many2one(
-        string='Reparation Location',
-        comodel_name='stock.location')
+        string="Reparation Location", comodel_name="stock.location"
+    )
     location_id = fields.Many2one(
-        string='Location Origin',
-        comodel_name='stock.location')
+        string="Location Origin", comodel_name="stock.location"
+    )
     location_dest_id = fields.Many2one(
-        string='Destination Location',
-        comodel_name='stock.location')
+        string="Destination Location", comodel_name="stock.location"
+    )

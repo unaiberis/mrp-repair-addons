@@ -4,8 +4,6 @@ from odoo import fields, models
 
 
 class StockLocation(models.Model):
-    _inherit = 'stock.location'
+    _inherit = "stock.location"
 
-    repair_eligible = fields.Boolean(
-        string='Eligible in Repairs',
-        default=False)
+    repair_eligible = fields.Boolean(string="Eligible in Repairs", default=False)
