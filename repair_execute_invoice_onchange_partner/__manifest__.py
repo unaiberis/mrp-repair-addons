@@ -5,13 +5,12 @@
     "version": "16.0.1.0.0",
     "category": "Manufacturing",
     "author": "AvanzOSC",
-    "website": "http://www.avanzosc.es",
+    "website": "https://github.com/avanzosc/mrp-repair-addons",
     "license": "AGPL-3",
     "depends": [
         "repair",
     ],
-    "data": [
-    ],
+    "data": [],
     "installable": True,
     "auto_install": True,
 }

@@ -8,7 +8,7 @@ class AccountMove(models.Model):
 
     @api.model
     def create(self, vals):
-        move = super(AccountMove, self).create(vals)
+        move = super().create(vals)
         if "create_move_from_repair" in self.env.context:
             move._onchange_partner_id()
         return move
