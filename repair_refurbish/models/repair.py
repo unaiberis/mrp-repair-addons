@@ -18,7 +18,7 @@ class RepairOrder(models.Model):
         string="Refurbished product", comodel_name="product.product"
     )
     refurbish_lot_id = fields.Many2one(
-        string="Refurbished Lot", comodel_name="stock.production.lot"
+        string="Refurbished Lot", comodel_name="stock.lot"
     )
     refurbish_move_id = fields.Many2one(
         string="Refurbished Inventory Move", comodel_name="stock.move"
@@ -94,7 +94,7 @@ class RepairLine(models.Model):
 
     @api.onchange("type", "repair_id")
     def onchange_operation_type(self):
-        res = super(RepairLine, self).onchange_operation_type()
+        res = super().onchange_operation_type()
         context = self.env.context
         if self.type == "add" and "to_refurbish" in context and context["to_refurbish"]:
             self.location_dest_id = context["refurbish_location_dest_id"]
