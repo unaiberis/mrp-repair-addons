@@ -6,9 +6,20 @@ from odoo import api, models
 class RepairLine(models.Model):
     _inherit = "repair.line"
 
-    @api.onchange("type", "repair_id", "repair_id.type_id")
+    @api.onchange("type", "repair_id")
     def onchange_operation_type(self):
         res = super().onchange_operation_type()
+        if self.type == "add":
+            self.location_id = self.repair_id.type_id.location_id.id
+            self.location_dest_id = self.repair_id.type_id.location_dest_id.id
+        else:
+            self.location_id = self.repair_id.type_id.location_dest_id.id
+            self.location_dest_id = self.repair_id.type_id.location_id.id
+        return res
+
+    @api.depends("repair_id.type_id")
+    def _compute_location_id(self):
+        res = super()._compute_location_id()
         if self.type == "add":
             self.location_id = self.repair_id.type_id.location_id.id
             self.location_dest_id = self.repair_id.type_id.location_dest_id.id
